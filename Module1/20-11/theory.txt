@@ -1,0 +1,41 @@
+1.Dart sdk
+https://dart.dev/get-dart/archive
+
+zip file
+Extract
+
+2.
+D:\E_Driver\E Drive\software\dartsdk-windows-x64-release\dart-sdk\bin
+
+This pc-> right click -> advanced system settings -> environment variables
+-> path-> paste your path -> click on ok
+
+3.
+https://www.jetbrains.com/idea/download/?section=windows
+-> IntelliJ IDEA Community Edition
+Download
+Install
+
+4. open intelij and click on new project
+
+
+var -> variable
+
+operators:
+1)arithmetic Op
++,-,*,/,%
+
+2)shorthand Op
++=,-=,*=,/=,%=
+
+3)relational op
+<,>,<=,>=,==,!=
+
+
+a+=b 
+a=a+b
+
+
+a=a+b
+c=a+b
+
