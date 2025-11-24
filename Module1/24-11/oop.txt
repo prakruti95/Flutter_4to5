@@ -1,0 +1,34 @@
+OOP -> Object Oriented Programming
+
+1.object -> any entity which has own and state and behaviour
+ex:pen,paper,chair etc..
+
+2.class -> collection of objects
+ex:human body
+
+3.abstraction -> Hiding internal details and showing functionalities
+ex:login page
+
+4.encapsulation -> Wrapping up of data or binding of data
+ex:capsule
+
+5.inheritance -> When one object acquire all the properties 
+and behaviour of parent class
+ex:father-son
+
+6.polymorphism -> Many ways to perform anything
+ex:
+1)overloading
+2)overriding
+
+-> if method does not have a return type then it's also ok in dart
+
+constructor -> method having a same as a classname
+-> constructor does not have a return type
+-> if you will create an object constructor calls automatically
+
+Types of Constructor
+1)default
+2)parameterized
+3)named
+
