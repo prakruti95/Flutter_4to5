@@ -1,0 +1,8 @@
+Task:
+
+-> take any number and make a sum of first and last digit
+
+-> take any number and print the reverse num of it
+
+-> take any number and find a biggest digit of this number
+
