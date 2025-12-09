@@ -1,0 +1,22 @@
+Overloading :
+Method having a same name but number of parameters are diffrent
+that is called overloading.
+
+Overriding :
+Method having a same name and number of parameters are also same
+that is called overriding.
+
+-> overloading is not supported in dart
+-> just because of it's a dynamically typed language
+
+Exception Handling:
+
+10/5=2
+10/0=infinite
+
+
+try
+catch
+throw
+finally
+
