@@ -1,0 +1,7 @@
+Types of Widgets
+1)Stateless Widget -> do not accept dynamic changes
+2)Stateful Widget -> accept dynamic changes
+
+MaterialApp -> Scaffold -> Colum/Row -> 
+
+
