@@ -1,0 +1,22 @@
+1. Flutter Introduction -> Module 1
+
+2. Dart Programming -> Module 2
+
+3. UI Designing -> Module 3 upto que no .28
+ 
+4.
+Advance UI designing->
+Module 6,4 Questions of Advance UI,Navigation and Routing,Custom Widgets
+
+
+5.
+Database:
+Offline-> Module 8,Module 5,State Management with Provider
+Online -> Module 10,Module 9,Module 7,
+9. Animations and Transitions
+
+
+
+6.
+Deployment -> Module 11,Capstone Project
+
