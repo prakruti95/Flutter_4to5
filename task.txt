@@ -1,0 +1,14 @@
+1. Splash Screen->timer
+2. Login Screen->validation
+3. Dashboard Screen-> sharedprefrence
+4. add action menu for call,sms and logout functionality it should be working
+5. in dashboard screen display 4 categories names with logo[Gridview]
+
+-> animals
+-> vehicles
+-> vegetables
+-> fruits
+
+6. when i click on any grid it should be show 5 items in a listview
+7. in listview right hand side one sound option is there when i click on that name should be pronounced
+ 
