@@ -1,0 +1,16 @@
+Db: shop
+Table : p_products
+col: 
+id-int,primakry key,AI
+pname-varchar -255,
+pprice-int,
+pdes-varchar-255
+
+connect.php
+insert
+view
+update
+delete
+
+
+
