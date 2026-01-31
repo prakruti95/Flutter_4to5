@@ -1,0 +1,1 @@
+from you own api insert 10 data and view this all details in card using http
