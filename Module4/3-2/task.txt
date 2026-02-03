@@ -1,0 +1,38 @@
+1.Splash Screen
+2.Connectivity
+3.Login Screen
+4.Do you want to signup?
+5.Signup Screen
+6.SharedPrefrence-Dashboard Screen
+7.Appbar welcome-tops ,Logout
+8.Floating action Button
+9.Form
+Current Month & date -> detect
+Expense -500
+Category - drop down
+Button -> Expense Add
+10.Expense View
+11.Edit,Delete
+
+Db -> Expense
+Table ->
+
+Users -> signup,login
+id
+name
+email
+pass
+
+tracker -> 
+id
+date
+amount
+category
+
+expense_category
+id
+category_name
+
+Optional:
+12.Category Add
+13.From View you can create PDF-Storage
