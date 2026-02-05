@@ -1,0 +1,1 @@
+echo "<li><a href='diya/categorydelete.php'>Category Delete</a></li>";
