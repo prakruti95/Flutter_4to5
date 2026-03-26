@@ -1,0 +1,250 @@
+🔹 What is Provider in Flutter?
+
+**Provider** is a state management solution in Flutter. 
+It helps you manage and share data across your app efficiently without passing data manually
+through constructors.
+
+👉 In simple words:
+Provider lets you **store data in one place** and **access/update it from anywhere in the 
+widget tree**.
+
+---
+
+# 🔹 Why use Provider?
+
+* Avoids **prop drilling** (passing data through multiple widgets)
+* Keeps code **clean and scalable**
+* Separates **UI and business logic**
+* Easy to understand for beginners
+
+---
+
+# 🔹 Basic Concept
+
+Provider works with 3 main parts:
+
+1. **Model (Data Class)** → Holds the data
+2. **ChangeNotifier** → Notifies UI when data changes
+3. **Consumer / Provider.of** → Reads the data in UI
+
+---
+
+# 🔹 Step-by-Step Example
+
+## 1. Add dependency
+
+```yaml
+dependencies:
+  provider: ^6.0.0
+```
+
+---
+
+## 2. Create a Model (Counter Example)
+
+```dart
+import 'package:flutter/material.dart';
+
+class CounterProvider with ChangeNotifier {
+  int _count = 0;
+
+  int get count => _count;
+
+  void increment() {
+    _count++;
+    notifyListeners(); // Notifies UI to rebuild
+  }
+}
+```
+
+👉 Explanation:
+
+* `_count` is private
+* `count` is a getter to access value
+* `increment()` updates value and calls `notifyListeners()`
+
+---
+
+## 3. Provide it in main.dart
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'counter_provider.dart';
+import 'home_screen.dart';
+
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => CounterProvider(),
+      child: MyApp(),
+    ),
+  );
+}
+```
+
+👉 This makes `CounterProvider` available to the entire app
+
+---
+
+## 4. Use it in UI
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'counter_provider.dart';
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final counter = Provider.of<CounterProvider>(context);
+
+    return Scaffold(
+      appBar: AppBar(title: Text("Provider Example")),
+      body: Center(
+        child: Text(
+          counter.count.toString(),
+          style: TextStyle(fontSize: 30),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          counter.increment();
+        },
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
+```
+
+---
+
+# 🔹 How it works
+
+1. App starts → Provider is created
+2. UI reads data using `Provider.of`
+3. When button is pressed → `increment()` runs
+4. `notifyListeners()` is called
+5. UI automatically rebuilds with updated value
+
+---
+
+# 🔹 Alternative (Better) Way: Consumer
+
+dart
+Consumer<CounterProvider>(
+  builder: (context, counter, child) {
+    return Text(
+      counter.count.toString(),
+      style: TextStyle(fontSize: 30),
+    );
+  },
+)
+
+
+👉 Benefit:
+
+Only this widget rebuilds (not entire screen)
+
+---
+
+ Key Points to Remember
+
+ChangeNotifier → for state class
+notifyListeners() → refresh UI
+Provider.of(context) → access data
+Consumer → optimized rebuild
+
+=================================================
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => ThemeProvider(),
+      child: MyApp(),
+    ),
+  );
+}
+
+// 🔹 PROVIDER CLASS
+class ThemeProvider with ChangeNotifier {
+  bool _isDark = false;
+
+  bool get isDark => _isDark;
+
+  ThemeMode get themeMode =>
+      _isDark ? ThemeMode.dark : ThemeMode.light;
+
+  void toggleTheme(bool value) {
+    _isDark = value;
+    notifyListeners();
+  }
+}
+
+// 🔹 MAIN APP
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Consumer<ThemeProvider>(
+      builder: (context, themeProvider, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          themeMode: themeProvider.themeMode,
+          theme: ThemeData.light(),
+          darkTheme: ThemeData.dark(),
+          home: HomeScreen(),
+        );
+      },
+    );
+  }
+}
+
+// 🔹 HOME SCREEN WITH SWITCH
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Provider Switch Example"),
+      ),
+      body: Center(
+        child: Consumer<ThemeProvider>(
+          builder: (context, themeProvider, child) {
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  themeProvider.isDark ? "Dark Mode" : "Light Mode",
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 10),
+                Switch(
+                  value: themeProvider.isDark,
+                  onChanged: (value) {
+                    themeProvider.toggleTheme(value);
+                  },
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+✅ What happens here:
+ThemeProvider
+Stores isDark value
+Updates it using toggleTheme()
+ChangeNotifierProvider
+Makes ThemeProvider available to entire app
+Consumer
+Listens for changes
+Rebuilds UI when notifyListeners() is called
+Switch Widget
+Reads isDark
+Updates value when toggled
