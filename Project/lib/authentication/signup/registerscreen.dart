@@ -191,7 +191,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   );
                                 },
                                 child: Text(
-                                  "Already have an account?",
+                                  "Alreadyy have an account?",
                                   style: Theme.of(context)
                                       .textTheme
                                       .bodyMedium!
