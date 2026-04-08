@@ -41,6 +41,11 @@ dependencies:
   share_plus: ^12.0.2 #sharing data
   path: ^1.9.1
   path_provider: ^2.1.5
+  permission_handler: any
+  fluttertoast: ^9.0.0
+  dio: ^5.7.0
+  image_gallery_saver_plus: any
+  sqflite: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
