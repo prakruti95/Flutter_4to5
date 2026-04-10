@@ -3,8 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../constants.dart';
 import '../adminlogin.dart';
-
-
+import 'adminhome.dart';
 
 class AdminFront extends StatefulWidget
 {
@@ -33,7 +32,7 @@ class FrontPage extends State<AdminFront>
 
   static List<Widget> _widgetOptions = <Widget>
   [
-    //AdminHome(),
+     AdminHome(),
     //AdminUpload(),
   ];
 
@@ -66,7 +65,7 @@ class FrontPage extends State<AdminFront>
         ],
       ),
       body: Center(
-        //child: _widgetOptions.elementAt(_selectedIndex),
+        child: _widgetOptions.elementAt(_selectedIndex),
       ),
       backgroundColor: kLightGold,
       bottomNavigationBar: BottomNavigationBar(

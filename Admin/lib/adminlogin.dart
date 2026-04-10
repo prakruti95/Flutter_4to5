@@ -42,7 +42,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
   {
     // TODO: implement initState
 
-    //check_if_already_login();
+    check_if_already_login();
   }
 
   void check_if_already_login() async
@@ -163,11 +163,13 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(const SnackBar(content: Text("Login Fail")));
-    } else {
+    } else
+    {
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(const SnackBar(content: Text("Login Success")));
-
+      sharedPreferences.setBool('ewishesadmin', false);
+      sharedPreferences.setString('uname', _usernameController.text.toString());
 
 
       Navigator.pushReplacement(
