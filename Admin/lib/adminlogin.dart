@@ -5,8 +5,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../constants.dart';
 import 'adminfront.dart';
 
-
-class AdminLoginApp extends StatelessWidget {
+class AdminLoginApp extends StatelessWidget
+{
   const AdminLoginApp({Key? key}) : super(key: key);
 
   @override

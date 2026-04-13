@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../constants.dart';
 import '../adminlogin.dart';
 import 'adminhome.dart';
+import 'adminupload.dart';
 
 class AdminFront extends StatefulWidget
 {
@@ -33,7 +34,7 @@ class FrontPage extends State<AdminFront>
   static List<Widget> _widgetOptions = <Widget>
   [
      AdminHome(),
-    //AdminUpload(),
+     AdminUpload(),
   ];
 
   void _onItemTapped(int index) {

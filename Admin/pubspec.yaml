@@ -37,6 +37,8 @@ dependencies:
   http: ^1.6.0 #api calling
   shared_preferences: ^2.5.3 #session management
   fluttertoast: ^9.0.0
+  image_picker: any
+  file_picker: ^8.0.0+1
 dev_dependencies:
   flutter_test:
     sdk: flutter
