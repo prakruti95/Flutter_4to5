@@ -1,0 +1,85 @@
+📦 Flutter App Size Reduce Karva na Effective Tips
+1️⃣ Use --split-per-abi (for APK)
+Avoid shipping unnecessary native binaries (like x86 if you only need arm64).
+
+bash
+Copy
+Edit
+flutter build apk --split-per-abi
+→ Aa command thi alag-alag APK generate thase (arm64-v8a, armeabi-v7a, x86_64)
+→ Play Store automatically selects correct one
+
+2️⃣ Use AAB Instead of APK
+AAB (Android App Bundle) generates optimized APKs for each device:
+
+bash
+Copy
+Edit
+flutter build appbundle
+✅ Recommended for Play Store uploads — size drastically reduces!
+
+3️⃣ Remove Unused Resources
+Delete unnecessary images, fonts, and assets.
+
+Use flutter_launcher_icons carefully — keep icon sizes optimized.
+
+4️⃣ Minimize Dependencies
+Use only required packages from pubspec.yaml.
+
+Remove unused packages.
+
+Prefer lightweight libraries (e.g., use http instead of bigger network packages unless needed).
+
+5️⃣ Tree Shaking (for Dart Code)
+Flutter automatically does this in release builds.
+
+bash
+Copy
+Edit
+flutter build apk --release
+✅ Removes unused Dart code from final binary
+
+6️⃣ Compress Image Assets
+Use tools like:
+
+tinypng.com
+
+imagecompressor.com
+
+Also prefer:
+
+.webp instead of .png (smaller and supported)
+
+7️⃣ Use Proguard (for Android)
+For native and Kotlin/Java code optimization:
+
+In android/app/build.gradle, enable it:
+
+gradle
+Copy
+Edit
+buildTypes {
+    release {
+        shrinkResources true
+        minifyEnabled true
+        proguardFiles getDefaultProguardFile(
+            'proguard-android-optimize.txt'),
+            'proguard-rules.pro'
+    }
+}
+8️⃣ Lazy Load or Cache Network Images
+Use packages like cached_network_image or load assets conditionally.
+
+9️⃣ Defer features using deferred imports
+If you have heavy screens used occasionally, use deferred import to load them only when needed.
+
+dart
+Copy
+Edit
+import 'package:my_heavy_screen.dart' deferred as heavy;
+🔍 Bonus Tip: Analyze App Size
+bash
+Copy
+Edit
+flutter build apk --analyze-size
+It generates a .json and .html report to see what's taking space in your app.
