@@ -1,0 +1,74 @@
+flutter_stripe: ^12.6.0-> Resume -> Ai tools
+
+-> Technical
+-> Practical
+-> HR
+
+Inteview Prep:
+
+-> Interview_question.pdf 
+Basic
+Intermediate
+Advanced
+
+Dart -> 
+
+data type
+operator
+String interpolation
+conditional and looping
+pattern
+OOP
+inheritance
+polymorphism
+constructor
+object
+class
+Keywords- this,static,super,final,async,await,future
+dart features
+What is Flutter and why we are using flutter?
+flutter vs react native
+
+-> https://codingwithtashi.medium.com/dart-interview-questions-and-answers-866d5c6a5141'
+-> https://www.wecreateproblems.com/interview-questions/dart-interview-questions
+
+-> Query
+
+=> Flutter:
+
+Designing :
+Widgets
+initstate
+setstate
+bloc
+provider
+Scaffold
+Stack
+
+
+Coding:
+Database
+
+offline
+online
+firebase
+payment gateway
+login with google
+google map
+api calling
+
+
+Practical:
+offline db
+api calling
+payment gateway
+firebase chat app
+
+
+
+
+
+
+
+
+
