@@ -1,0 +1,25 @@
+WAMP
+W => Windows
+A => Apache
+M => Mysql
+P => phpmyadmin
+
+LAMP
+L => Linux
+A => Apache
+M => Mysql
+P => phpmyadmin
+
+MAMP
+M => Mac
+A => Apache
+M => Mysql
+P => phpmyadmin
+
+XAMPP
+X => Cross Platform
+A => Apache
+M => Mysql
+P => perl
+P => phpmyadmin
+

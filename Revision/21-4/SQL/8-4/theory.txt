@@ -1,0 +1,47 @@
+Scalar Functions
+UCASE
+LCASE
+MID
+LENGTH
+ROUND
+NOW
+FORMAT
+
+
+Agreegate Functions
+MAX
+MIN
+SUM
+AVG
+COUNT
+FIRST
+LAST
+
+Constraint Keys:
+Primary 
+-> data duplication avoid
+-> you can only assign once in a table
+-> you can not assign null value there
+
+Unique
+-> uniquely identify data
+-> you can assign multiple time in a table
+-> you can assign null value there but only once
+
+Foreign(Index)
+-> It will use for join
+-> it will use to pass refrence
+
+
+Joins:
+1)Inner Join
+2)Left Join
+3)Right Join
+4)Full Join
+
+
+
+
+
+
+

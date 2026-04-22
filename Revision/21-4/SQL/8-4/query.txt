@@ -1,0 +1,22 @@
+agreegate functions:
+MAX->SELECT MAX(salary) FROM data
+MIN->SELECT MIN(salary) FROM data
+SUM-> SELECT SUM(salary) FROM data
+AVG->SELECT AVG(salary) FROM data
+COUNT->SELECT COUNT(salary) FROM data 
+FIRST-> SELECT salary FROM data LIMIT 1; 
+LAST->SELECT * from data ORDER by salary DESC LIMIT 1; 
+
+Scalar Functions
+UCASE->SELECT UCASE(name) FROM data
+LCASE->SELECT LCASE(name) FROM data
+MID -> SELECT MID(NAME,1,4) FROM Students; 
+LEN -> SELECT LENGTH(NAME) FROM Stuents; 
+ROUND->SELECT ROUND(MARKS,0) FROM table_name;
+NOW->SELECT NAME, NOW() AS DateTime FROM Students; 
+FORMAT->SELECT NAME, FORMAT(Now(),'YYYY-MM-DD') AS Date FROM
+Students; 
+
+DCL:
+Rollback -> 
+Commit -> 
